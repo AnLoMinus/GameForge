@@ -8,15 +8,16 @@
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
 
     :root {
-      --primary: #04e1ff;
-      --primary-soft: #00a8d6;
+      --primary: #f6c453;           /* main gold */
+      --primary-soft: #e4a93a;      /* softer gold */
       --bg-deep: #02030a;
-      --bg-mid: #070016;
-      --card-bg1: rgba(12, 12, 28, 0.9);
-      --card-bg2: rgba(4, 4, 12, 0.95);
-      --border-soft: #00dbff66;
-      --text-main: #e6e6ff;
+      --bg-mid: #050009;
+      --card-bg1: rgba(14, 10, 30, 0.96);
+      --card-bg2: rgba(4, 2, 12, 0.98);
+      --border-soft: #f6c45355;
+      --text-main: #f7f2e9;
       --accent-gold: #ffd56a;
+      --accent-amber: #ffb347;
     }
 
     * {
@@ -26,7 +27,7 @@
     body {
       margin: 0;
       font-family: 'Orbitron', system-ui, sans-serif;
-      background: radial-gradient(circle at center, #06091c 0%, #02030a 40%, #000000 100%);
+      background: radial-gradient(circle at top, #140a22 0%, #02030a 45%, #000000 100%);
       color: var(--text-main);
       text-align: center;
       overflow-x: hidden;
@@ -41,19 +42,19 @@
       height: 200%;
       pointer-events: none;
       background-repeat: repeat;
-      opacity: 0.3;
+      opacity: 0.32;
       z-index: -2;
     }
     .stars {
-      background-image: radial-gradient(2px 2px at 20px 20px, #ffffffaa, transparent 40%);
+      background-image: radial-gradient(2px 2px at 20px 20px, #ffffffb3, transparent 40%);
       animation: drift 80s linear infinite;
     }
     .stars2 {
-      background-image: radial-gradient(2px 2px at 60px 80px, #7cfef5aa, transparent 40%);
+      background-image: radial-gradient(2px 2px at 60px 80px, #f6c453aa, transparent 40%);
       animation: drift 120s linear infinite reverse;
     }
     .stars3 {
-      background-image: radial-gradient(2px 2px at 120px 160px, #ffd56aaa, transparent 40%);
+      background-image: radial-gradient(2px 2px at 120px 160px, #ffb347aa, transparent 40%);
       animation: drift 160s linear infinite;
     }
 
@@ -62,21 +63,21 @@
       to   { transform: translate3d(-25%, -25%, 0) scale(1.2); }
     }
 
-    /* simple matrix spark rain */
+    /* subtle golden rain overlay */
     .matrix-overlay {
       position: fixed;
       inset: 0;
       pointer-events: none;
-      background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 255, 180, 0.08) 50%, transparent 100%);
+      background-image: linear-gradient(to bottom, transparent 0%, rgba(246, 196, 83, 0.12) 50%, transparent 100%);
       mix-blend-mode: screen;
-      opacity: 0.4;
-      animation: pulse 5s ease-in-out infinite;
+      opacity: 0.55;
+      animation: pulse 6s ease-in-out infinite;
       z-index: -1;
     }
 
     @keyframes pulse {
-      0%, 100% { opacity: 0.15; }
-      50% { opacity: 0.45; }
+      0%, 100% { opacity: 0.22; }
+      50% { opacity: 0.72; }
     }
 
     /* navbar */
@@ -84,9 +85,10 @@
       position: sticky;
       top: 0;
       z-index: 10;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.1));
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid #00f2ff33;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.88), rgba(0,0,0,0.18));
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(246,196,83,0.4);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.7);
     }
 
     .nav-inner {
@@ -107,11 +109,12 @@
     }
 
     .logo-mark {
-      width: 28px;
-      height: 28px;
+      width: 30px;
+      height: 30px;
       border-radius: 50%;
-      background: radial-gradient(circle at 30% 20%, #ffffff, #04e1ff 40%, #7c3bff 70%, #000 100%);
-      box-shadow: 0 0 12px #00f2ffcc;
+      background: radial-gradient(circle at 30% 20%, #ffffff, #f6c453 40%, #ffb347 70%, #000 100%);
+      box-shadow: 0 0 18px rgba(246,196,83,0.9);
+      border: 1px solid rgba(255, 227, 164, 0.8);
     }
 
     nav a {
@@ -119,13 +122,14 @@
       font-size: 0.9rem;
       text-decoration: none;
       color: var(--text-main);
-      opacity: 0.8;
+      opacity: 0.84;
       transition: 0.25s;
     }
 
     nav a:hover {
       opacity: 1;
-      text-shadow: 0 0 8px #00f2ff;
+      text-shadow: 0 0 8px #f6c453;
+      color: var(--accent-gold);
     }
 
     /* hero */
@@ -142,20 +146,23 @@
       font-size: 0.9rem;
       letter-spacing: 0.25em;
       text-transform: uppercase;
-      color: #7cfef5;
+      color: var(--accent-gold);
       margin-bottom: 10px;
     }
 
     .hero-title {
       font-size: clamp(2.8rem, 5vw, 3.8rem);
       margin: 0 0 14px;
-      text-shadow: 0 0 7px #7cfef5, 0 0 14px #00f2ff;
+      text-shadow: 0 0 6px rgba(246,196,83,0.6), 0 0 18px rgba(255, 221, 150, 0.8);
     }
 
     .hero-sub {
       font-size: 1.05rem;
       opacity: 0.9;
       margin-bottom: 26px;
+      max-width: 780px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .hero-tags {
@@ -168,12 +175,13 @@
 
     .tag {
       border-radius: 999px;
-      border: 1px solid #00f2ff55;
+      border: 1px solid rgba(246,196,83,0.5);
       padding: 6px 14px;
       font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 0.12em;
-      opacity: 0.9;
+      opacity: 0.95;
+      background: radial-gradient(circle at top, rgba(246,196,83,0.22), rgba(0,0,0,0.6));
     }
 
     .hero-cta {
@@ -195,28 +203,29 @@
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--primary), #7cfef5);
-      color: #000;
-      box-shadow: 0 0 18px #00f2ffcc;
+      background: linear-gradient(135deg, #f6c453, #ffdf91);
+      color: #1b1205;
+      box-shadow: 0 0 22px rgba(246,196,83,0.95);
     }
 
     .btn-primary:hover {
-      transform: translateY(-2px) scale(1.03);
-      box-shadow: 0 0 26px #00f2ff;
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 0 30px rgba(255, 225, 150, 1);
     }
 
     .btn-ghost {
       background: transparent;
-      border: 1px solid #ffffff66;
+      border: 1px solid rgba(247, 242, 233, 0.6);
       color: var(--text-main);
     }
 
     .btn-ghost:hover {
-      border-color: var(--primary);
-      text-shadow: 0 0 8px #00f2ff;
+      border-color: var(--accent-gold);
+      text-shadow: 0 0 8px #f6c453;
+      color: var(--accent-gold);
     }
 
-    /* realm grid */
+    /* sections */
     .section-shell {
       max-width: 1100px;
       margin: 0 auto;
@@ -230,10 +239,14 @@
 
     .section-sub {
       font-size: 0.95rem;
-      opacity: 0.8;
+      opacity: 0.82;
       margin-bottom: 26px;
+      max-width: 780px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
+    /* realms grid */
     .realms-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -241,21 +254,22 @@
     }
 
     .realm-card {
-      background: linear-gradient(145deg, var(--card-bg1), var(--card-bg2));
+      background: radial-gradient(circle at top left, rgba(246,196,83,0.12), transparent 55%),
+                  linear-gradient(145deg, var(--card-bg1), var(--card-bg2));
       border-radius: 18px;
       padding: 22px 18px 20px;
       border: 1px solid var(--border-soft);
       position: relative;
       overflow: hidden;
       cursor: pointer;
-      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s;
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s, background 0.22s;
     }
 
     .realm-card::before {
       content: '';
       position: absolute;
       inset: -40%;
-      background: conic-gradient(from 120deg, transparent 0deg, #00f2ff22 70deg, transparent 140deg);
+      background: conic-gradient(from 90deg, transparent 0deg, rgba(246,196,83,0.28) 70deg, transparent 140deg);
       opacity: 0;
       transition: opacity 0.3s;
     }
@@ -266,8 +280,9 @@
 
     .realm-card:hover {
       transform: translateY(-8px) scale(1.02);
-      box-shadow: 0 0 22px #00f2ffaa;
-      border-color: #00f2ff;
+      box-shadow: 0 0 26px rgba(246,196,83,0.9);
+      border-color: rgba(255, 223, 156, 0.95);
+      background: radial-gradient(circle at top, rgba(246,196,83,0.24), rgba(3,0,10,0.98));
     }
 
     .realm-label {
@@ -276,6 +291,7 @@
       letter-spacing: 0.16em;
       opacity: 0.7;
       margin-bottom: 4px;
+      color: rgba(255, 232, 176, 0.85);
     }
 
     .realm-name {
@@ -287,8 +303,8 @@
       height: 1px;
       width: 40%;
       margin: 8px auto 10px;
-      background: linear-gradient(to right, transparent, #00f2ff, transparent);
-      opacity: 0.7;
+      background: linear-gradient(to right, transparent, #f6c453, transparent);
+      opacity: 0.85;
     }
 
     .realm-meta {
@@ -309,15 +325,23 @@
       font-size: 0.7rem;
       padding: 4px 9px;
       border-radius: 999px;
-      border: 1px solid #00f2ff55;
-      opacity: 0.85;
+      border: 1px solid rgba(246,196,83,0.6);
+      opacity: 0.9;
+      background: radial-gradient(circle at top, rgba(246,196,83,0.26), rgba(0,0,0,0.7));
     }
 
     .realm-link {
       margin-top: 12px;
       font-size: 0.8rem;
-      opacity: 0.8;
-      text-decoration: underline;
+      opacity: 0.86;
+      text-decoration: none;
+      color: var(--accent-gold);
+    }
+
+    .realm-link::after {
+      content: '↗';
+      margin-left: 4px;
+      font-size: 0.75rem;
     }
 
     /* roadmap */
@@ -330,9 +354,9 @@
 
     .roadmap-step {
       border-radius: 16px;
-      border: 1px dashed #ffffff33;
+      border: 1px dashed rgba(247, 242, 233, 0.55);
       padding: 16px 18px;
-      background: radial-gradient(circle at top, #19193355, #02030a 70%);
+      background: radial-gradient(circle at top, rgba(246,196,83,0.16), #02030a 70%);
       font-size: 0.9rem;
       text-align: left;
     }
@@ -340,7 +364,7 @@
     .roadmap-step h3 {
       margin-top: 0;
       font-size: 1rem;
-      color: var(--accent-gold);
+      color: var(--accent-amber);
     }
 
     ul {
@@ -355,14 +379,15 @@
 
     /* footer */
     footer {
-      border-top: 1px solid #00f2ff33;
+      border-top: 1px solid rgba(246,196,83,0.4);
       padding: 24px 16px 40px;
       font-size: 0.8rem;
-      opacity: 0.8;
+      opacity: 0.86;
+      background: radial-gradient(circle at top, rgba(246,196,83,0.14), #02030a 70%);
     }
 
     footer a {
-      color: var(--primary);
+      color: var(--accent-gold);
       text-decoration: none;
     }
 
