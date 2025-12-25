@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RPG Idle Mini</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="panel">
+    <header>
+      <div>
+        <h1>RPG Idle Mini</h1>
+        <p>Earn gold automatically, defeat enemies, and buy upgrades.</p>
+      </div>
+      <div class="stats">
+        <span id="level">Level 1</span>
+        <span id="gold">Gold: 0</span>
+        <span id="dps">DPS: 1</span>
+      </div>
+    </header>
+    <section class="hero">
+      <div>
+        <h2 id="enemyName">Slime</h2>
+        <div class="bar"><div id="hpFill"></div></div>
+        <p id="enemyHp">HP: 20</p>
+      </div>
+      <button id="strike">Strike</button>
+    </section>
+    <section class="shop">
+      <h3>Upgrades</h3>
+      <div class="item">
+        <div>
+          <strong>Sword</strong>
+          <p id="strikeInfo">Click Damage: 3</p>
+        </div>
+        <button id="buyStrike">Buy (15g)</button>
+      </div>
+      <div class="item">
+        <div>
+          <strong>Training</strong>
+          <p id="dpsInfo">DPS: 1</p>
+        </div>
+        <button id="buyDps">Buy (25g)</button>
+      </div>
+      <div class="item">
+        <div>
+          <strong>Save</strong>
+          <p>Progress auto-saves locally.</p>
+        </div>
+        <button id="save">Save Now</button>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

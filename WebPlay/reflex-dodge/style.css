@@ -1,0 +1,13 @@
+:root { --bg:#0b1224; --panel:#0f172a; --accent:#38bdf8; --danger:#f43f5e; --text:#e2e8f0; }
+* { box-sizing:border-box; }
+body { margin:0; min-height:100vh; background:var(--bg); color:var(--text); font-family:'Inter',system-ui,sans-serif; display:grid; place-items:center; padding:1rem; }
+.panel { width:min(900px,95vw); background:var(--panel); border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:.75rem 1rem; display:flex; justify-content:space-between; align-items:center; box-shadow:0 10px 26px rgba(0,0,0,0.45); }
+button { background:linear-gradient(135deg,var(--accent),#0ea5e9); color:#0b1224; border:none; border-radius:10px; padding:0.55rem 1.1rem; font-weight:800; cursor:pointer; }
+.stats { display:flex; gap:1rem; align-items:center; }
+#arena { margin-top:1rem; width:min(900px,95vw); height:520px; background: radial-gradient(circle at 20% 30%, rgba(56,189,248,0.12), transparent 45%), #0b1224; border:1px solid rgba(255,255,255,0.08); border-radius:14px; position:relative; overflow:hidden; }
+#player { position:absolute; width:40px; height:40px; background:linear-gradient(135deg,#38bdf8,#818cf8); border-radius:10px; left:50%; top:50%; transform:translate(-50%,-50%); box-shadow:0 8px 20px rgba(56,189,248,0.45); }
+.projectile { position:absolute; width:22px; height:22px; border-radius:50%; background:linear-gradient(135deg,var(--danger),#fb7185); box-shadow:0 8px 20px rgba(244,63,94,0.45); }
+#overlay { position:fixed; inset:0; background:rgba(0,0,0,0.6); display:grid; place-items:center; }
+.hidden { display:none; }
+.dialog { background:var(--panel); width:320px; padding:1.25rem; border-radius:14px; text-align:center; box-shadow:0 12px 24px rgba(0,0,0,0.45); }
+.dialog p { color:#cbd5e1; }

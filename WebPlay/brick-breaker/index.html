@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brick Breaker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="panel">
+    <div>
+      <h1>Brick Breaker</h1>
+      <p>Move with mouse or arrows. Clear bricks before you run out of lives.</p>
+    </div>
+    <div class="stats">
+      <span id="score">Score: 0</span>
+      <span id="lives">Lives: 3</span>
+      <button id="start">Start</button>
+    </div>
+  </header>
+  <canvas id="game" width="900" height="520" aria-label="brick breaker canvas"></canvas>
+  <div id="overlay" class="hidden">
+    <div class="dialog">
+      <h2 id="title">Ready?</h2>
+      <p id="text">Press start to launch.</p>
+      <button id="restart">Restart</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

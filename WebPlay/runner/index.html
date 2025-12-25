@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Runner Energetic</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="panel">
+    <h1>Runner Energetic</h1>
+    <p>Press <strong>Space</strong> to jump, avoid obstacles, and chase a high score.</p>
+    <div class="status">
+      <span id="score">Score: 0</span>
+      <span id="speed">Speed: 1x</span>
+    </div>
+    <button id="startBtn">Start</button>
+  </div>
+  <div id="game" aria-label="runner lane">
+    <div id="player" aria-label="runner"></div>
+  </div>
+  <div id="overlay" class="hidden">
+    <div class="dialog">
+      <h2 id="overlayTitle">Ready?</h2>
+      <p id="overlayMessage">Tap Start to begin your sprint.</p>
+      <button id="restartBtn">Restart</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

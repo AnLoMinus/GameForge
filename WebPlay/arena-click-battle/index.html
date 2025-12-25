@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arena Click Battle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="panel">
+    <header>
+      <div>
+        <h1>Arena Click Battle</h1>
+        <p>Click to attack, buy upgrades, and clear stages.</p>
+      </div>
+      <div class="stats">
+        <span id="stage">Stage 1</span>
+        <span id="gold">Gold: 0</span>
+      </div>
+    </header>
+    <section class="arena">
+      <div class="enemy" id="enemy">
+        <div class="hp-bar"><div id="hpFill"></div></div>
+        <p id="enemyName">Goblin</p>
+        <p id="hp">HP: 50</p>
+      </div>
+      <button id="attack">Attack</button>
+    </section>
+    <section class="upgrades">
+      <h2>Upgrades</h2>
+      <div class="upgrade">
+        <div>
+          <strong>Damage</strong>
+          <p id="damageInfo">Damage: 1</p>
+        </div>
+        <button id="buyDamage">Buy (10g)</button>
+      </div>
+      <div class="upgrade">
+        <div>
+          <strong>Auto-Hits</strong>
+          <p id="autoInfo">DPS: 0</p>
+        </div>
+        <button id="buyAuto">Buy (20g)</button>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
