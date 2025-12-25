@@ -1,0 +1,53 @@
+:root {
+  --bg: #0c1726;
+  --accent: #9cff8b;
+  --text: #eaf5ff;
+  --target: #ff8da1;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(160deg, #0c1726, #0b1320);
+  color: var(--text);
+  font-family: 'Inter','Segoe UI', sans-serif;
+}
+
+.shell {
+  width: min(720px, 95vw);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+
+.hud { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; justify-content: center; margin-bottom: 10px; }
+button { background: var(--accent); border: none; color: #0b200b; padding: 8px 14px; border-radius: 10px; font-weight: 700; cursor: pointer; }
+
+.field {
+  height: 360px;
+  border-radius: 14px;
+  background: radial-gradient(circle at 20% 20%, rgba(156,255,139,0.1), transparent 30%),
+    radial-gradient(circle at 80% 60%, rgba(255,141,161,0.1), transparent 30%),
+    #0e1a2b;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.target {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff 0 20%, var(--target) 20% 60%, #8b1130 60%);
+  cursor: crosshair;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 12px 30px rgba(255,141,161,0.35);
+}
+
+.message { text-align: center; margin-top: 10px; min-height: 22px; font-weight: 700; }

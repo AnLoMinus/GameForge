@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aim Trainer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <h1>Aim Trainer</h1>
+      <p>פגעו כמה שיותר מטרות ב-30 שניות.</p>
+    </header>
+    <div class="hud">
+      <div>פגיעות: <span id="hits">0</span></div>
+      <div>נסיונות: <span id="shots">0</span></div>
+      <div>דיוק: <span id="accuracy">0%</span></div>
+      <div>זמן: <span id="time">30</span>s</div>
+      <button id="start">התחל</button>
+    </div>
+    <section class="field" id="field"></section>
+    <div class="message" id="message"></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

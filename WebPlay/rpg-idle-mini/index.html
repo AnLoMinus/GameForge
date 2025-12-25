@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RPG Idle Mini</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <h1>RPG Idle Mini</h1>
+      <p>צברו זהב אוטומטי, שדרגו התקפה והתמודדו עם אויבים חוזרים.</p>
+    </header>
+    <section class="hud">
+      <div>רמה: <span id="level">1</span></div>
+      <div>ניסיון: <span id="xp">0</span>/<span id="xpNeed">30</span></div>
+      <div>זהב: <span id="gold">0</span></div>
+      <div>כוח: <span id="power">1</span></div>
+      <button id="upgrade">שדרג (25 זהב)</button>
+    </section>
+    <section class="arena">
+      <div class="enemy" id="enemy">👾</div>
+      <div class="bar">
+        <div class="bar-fill" id="hpBar"></div>
+      </div>
+      <div id="hpText"></div>
+      <p class="hint">לחצו על האויב כדי לתקוף. זהב נצבר אוטומטית כל שניה.</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+:root {
+  --bg: #0c1829;
+  --card: #13233a;
+  --accent: #6fe3ff;
+  --match: #7cf7ae;
+  --text: #eaf6ff;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 20% 20%, rgba(111,227,255,0.15), transparent 30%),
+    radial-gradient(circle at 80% 40%, rgba(124,247,174,0.15), transparent 30%),
+    #0b1523;
+  color: var(--text);
+  font-family: 'Assistant', 'Segoe UI', sans-serif;
+}
+
+.shell {
+  width: min(760px, 92vw);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.35);
+}
+
+header { text-align: center; margin-bottom: 12px; }
+
+.hud {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+button {
+  background: var(--accent);
+  color: #062030;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(70px, 1fr));
+  gap: 12px;
+}
+
+.card {
+  aspect-ratio: 1/1;
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card.flipped { background: #12324d; border-color: var(--accent); }
+.card.matched { background: #123d2a; border-color: var(--match); color: var(--match); }
+.card span { opacity: 0; transition: opacity 0.2s ease; }
+.card.flipped span, .card.matched span { opacity: 1; }
+.card:active { transform: scale(0.98); }
+
+.message {
+  margin-top: 12px;
+  text-align: center;
+  min-height: 24px;
+  font-weight: 700;
+}

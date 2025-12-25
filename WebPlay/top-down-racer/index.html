@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top-Down Racer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <h1>Top-Down Racer</h1>
+      <p>התחמקו ממכשולים, אספו ניקוד והאיצו כמה שתרצו.</p>
+    </header>
+    <div class="hud">
+      <div>מהירות: <span id="speed">0</span> קמ"ש</div>
+      <div>ניקוד: <span id="score">0</span></div>
+      <button id="start">התחל</button>
+    </div>
+    <section class="road" id="road">
+      <canvas id="canvas" width="420" height="600"></canvas>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

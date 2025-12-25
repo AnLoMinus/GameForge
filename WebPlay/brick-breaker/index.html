@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brick Breaker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <h1>Brick Breaker</h1>
+      <p>שליטה בעכבר או חצים. שבור את כל הלבנים כדי לעלות שלב!</p>
+    </header>
+    <div class="hud">
+      <div>חיים: <span id="lives">3</span></div>
+      <div>שלב: <span id="level">1</span></div>
+      <button id="reset">ריסט</button>
+    </div>
+    <canvas id="canvas" width="640" height="420"></canvas>
+    <div class="message" id="message"></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
