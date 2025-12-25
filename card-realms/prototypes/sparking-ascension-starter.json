@@ -1,0 +1,76 @@
+{
+  "deck": {
+    "id": "GF-CR-DECK-01",
+    "name": "SparKing Ascension – Starter Sparks",
+    "theme": "Energy juggling and rapid ascension gates",
+    "size": 20,
+    "winCondition": "Reach 7 Spark Points before opponents.",
+    "playTimeMinutes": "10-15"
+  },
+  "cards": [
+    {
+      "id": "GF-CR-01",
+      "title": "Spark Initiate",
+      "type": "Support",
+      "cost": 1,
+      "effect": "Gain 1 Energy and draw 1 card.",
+      "lore": "A flicker that awakens the forge.",
+      "tags": ["starter", "energy"]
+    },
+    {
+      "id": "GF-CR-02",
+      "title": "Voltage Strike",
+      "type": "Attack",
+      "cost": 2,
+      "effect": "Deal 2 damage. If you spent Energy this turn, deal +1.",
+      "lore": "Lightning tuned to a duelist's rhythm.",
+      "tags": ["attack", "combo"]
+    },
+    {
+      "id": "GF-CR-03",
+      "title": "Gate Pulse",
+      "type": "Event",
+      "cost": 0,
+      "effect": "If you opened a Gate this turn, gain 2 Spark Points. Otherwise, gain 1 Energy.",
+      "lore": "Each gate echoes across the realms.",
+      "tags": ["gate", "tempo"]
+    },
+    {
+      "id": "GF-CR-04",
+      "title": "Realm Beacon",
+      "type": "Realm",
+      "cost": 3,
+      "effect": "While active, your Support cards cost 1 less (min 0).",
+      "lore": "A pillar of light guiding initiates upward.",
+      "tags": ["support", "economy"]
+    },
+    {
+      "id": "GF-CR-05",
+      "title": "Ascender's Focus",
+      "type": "Support",
+      "cost": 1,
+      "effect": "Convert 1 Energy into 1 Spark Point (once per turn).",
+      "lore": "Focus turns charge into pure ascent.",
+      "tags": ["conversion", "engine"]
+    },
+    {
+      "id": "GF-CR-06",
+      "title": "Parallel Shield",
+      "type": "Support",
+      "cost": 1,
+      "effect": "Prevent the next 2 damage dealt to you this round.",
+      "lore": "Two timelines hold the blow together.",
+      "tags": ["defense"]
+    }
+  ],
+  "rules": {
+    "setup": "Shuffle the deck. Give each player 3 cards and 1 Energy token.",
+    "turn": [
+      "Draw 1 card.",
+      "Play up to 1 card by paying its cost in Energy.",
+      "Resolve effects and check if a Gate opens (3 Energy spent this turn).",
+      "Opening a Gate grants +1 permanent Energy and lets you play one extra card next turn."
+    ],
+    "scoring": "Spark Points are tracked with tokens; first to 7 wins."
+  }
+}
