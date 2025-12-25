@@ -1,0 +1,100 @@
+:root {
+  --bg: #0b1224;
+  --panel: #0f172a;
+  --text: #e2e8f0;
+  --accent: #06b6d4;
+  --danger: #f97316;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+.panel {
+  width: min(900px, 95vw);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .75rem 1rem;
+  background: var(--panel);
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.45);
+}
+.stats { display: flex; gap: 1rem; align-items: center; }
+button {
+  background: linear-gradient(135deg, var(--accent), #22d3ee);
+  color: #0b1224;
+  border: none;
+  border-radius: 10px;
+  padding: 0.55rem 1.1rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+#track {
+  margin-top: 1rem;
+  width: min(900px, 95vw);
+  height: 520px;
+  background: linear-gradient(#111827, #0b1224);
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+#track::before, #track::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  background: repeating-linear-gradient(180deg, #e5e7eb 0 20px, transparent 20px 40px);
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.6;
+}
+#track::after { left: 20%; opacity: 0.3; }
+
+#car {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  width: 44px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--accent), #818cf8);
+  border-radius: 12px;
+  transform: translateX(-50%);
+  box-shadow: 0 10px 20px rgba(34,211,238,0.45);
+}
+
+.obstacle {
+  position: absolute;
+  width: 44px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--danger), #fb923c);
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(249,115,22,0.4);
+}
+
+#overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(0,0,0,0.6);
+}
+.hidden { display: none; }
+.dialog {
+  background: var(--panel);
+  width: 320px;
+  padding: 1.25rem;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.45);
+}
+.dialog p { color: #cbd5e1; }

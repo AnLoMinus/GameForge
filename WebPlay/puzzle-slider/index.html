@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puzzle Slider</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>15 Puzzle Slider</h1>
+      <p>Slide tiles into the empty space to restore the order.</p>
+      <div class="stats">
+        <span id="moves">Moves: 0</span>
+        <button id="shuffle">Shuffle</button>
+      </div>
+    </header>
+    <div id="grid" class="grid" aria-label="15 puzzle board"></div>
+    <div id="win" class="banner hidden">🎉 Solved!</div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

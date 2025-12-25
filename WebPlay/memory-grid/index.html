@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Grid</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="board-wrap">
+    <header>
+      <h1>Memory Grid</h1>
+      <p>Flip cards, match pairs, and beat the timer.</p>
+      <div class="stats">
+        <span id="moves">Moves: 0</span>
+        <span id="time">Time: 0s</span>
+        <span id="matches">Matches: 0/8</span>
+      </div>
+      <button id="reset">Restart</button>
+    </header>
+    <section id="grid" class="grid" aria-label="Memory grid"></section>
+    <div id="modal" class="modal hidden">
+      <div class="dialog">
+        <h2>Great job!</h2>
+        <p id="summary"></p>
+        <button id="playAgain">Play Again</button>
+      </div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

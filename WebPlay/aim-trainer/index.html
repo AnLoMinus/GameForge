@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aim Trainer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="panel">
+    <div>
+      <h1>Aim Trainer</h1>
+      <p>Hit targets quickly to boost accuracy.</p>
+    </div>
+    <div class="stats">
+      <span id="hits">Hits: 0</span>
+      <span id="misses">Misses: 0</span>
+      <span id="accuracy">Accuracy: 0%</span>
+      <span id="timer">Time: 30s</span>
+      <button id="start">Start</button>
+    </div>
+  </header>
+  <div id="arena" aria-label="aim arena"></div>
+  <div id="overlay" class="hidden">
+    <div class="dialog">
+      <h2>Round Over</h2>
+      <p id="summary"></p>
+      <button id="again">Play again</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

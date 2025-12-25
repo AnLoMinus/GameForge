@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Shooter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="panel">
+    <div>
+      <h1>Space Shooter</h1>
+      <p>Move with arrow keys or A/D, shoot with space.</p>
+    </div>
+    <div class="stats">
+      <span id="score">Score: 0</span>
+      <span id="lives">Lives: 3</span>
+      <button id="start">Start</button>
+    </div>
+  </header>
+  <div id="field" aria-label="space battlefield">
+    <div id="ship"></div>
+  </div>
+  <div id="overlay" class="hidden">
+    <div class="dialog">
+      <h2 id="title">Ready?</h2>
+      <p id="message">Press start to clear the wave.</p>
+      <button id="again">Play again</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
