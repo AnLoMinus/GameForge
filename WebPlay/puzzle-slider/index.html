@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puzzle Slider</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <div class="panel">
+      <h1>15 Puzzle</h1>
+      <p>Arrange the numbers in order. Use your mouse or arrow keys.</p>
+      <div class="stats">
+        <span>Moves: <strong id="moves">0</strong></span>
+        <span>Shuffles keep solvable.</span>
+      </div>
+      <button id="shuffle">Shuffle</button>
+    </div>
+    <section id="board" aria-label="15 puzzle board"></section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RPG Idle Mini</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>RPG Idle Mini</h1>
+      <div class="stats">
+        <span>Level: <strong id="level">1</strong></span>
+        <span>XP: <strong id="xp">0</strong>/<span id="xp-cap">10</span></span>
+        <span>Gold: <strong id="gold">0</strong></span>
+      </div>
+    </header>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Hero</h2>
+        <p id="hero-status">Resting...</p>
+        <button id="battle">Fight!</button>
+      </div>
+      <div class="card">
+        <h2>Upgrades</h2>
+        <button id="upgrade-power">Power +1 (15g)</button>
+        <button id="upgrade-speed">Faster loot (20g)</button>
+      </div>
+      <div class="card">
+        <h2>Log</h2>
+        <div id="log"></div>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

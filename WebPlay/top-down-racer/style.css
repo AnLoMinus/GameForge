@@ -1,0 +1,76 @@
+:root {
+  --bg: #0b1224;
+  --track: #111827;
+  --line: #cbd5e1;
+  --accent: #22d3ee;
+  --danger: #f97316;
+  --text: #e5e7eb;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 20% 20%, rgba(34,211,238,0.12), transparent 30%),
+              radial-gradient(circle at 80% 0%, rgba(249,115,22,0.14), transparent 35%),
+              var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+main {
+  width: min(620px, 90vw);
+  background: rgba(11,18,36,0.9);
+  border-radius: 16px;
+  padding: 1.4rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+
+header { display: flex; align-items: center; justify-content: space-between; }
+.stats { display: flex; gap: 1rem; font-weight: 700; }
+
+#track {
+  position: relative;
+  margin-top: 1rem;
+  height: 420px;
+  overflow: hidden;
+  border-radius: 14px;
+  background: var(--track);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+#car {
+  position: absolute;
+  width: 36px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--accent), #3b82f6);
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(34,211,238,0.35);
+}
+
+.obstacle {
+  position: absolute;
+  width: 20px;
+  height: 24px;
+  background: linear-gradient(180deg, #f97316, #ef4444);
+  border-radius: 4px;
+  box-shadow: 0 6px 14px rgba(239,68,68,0.3);
+}
+
+.lane-line {
+  position: absolute;
+  width: 6px;
+  height: 50px;
+  background: var(--line);
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.6;
+}
+
+.hint { text-align: center; color: #cbd5e1; }
