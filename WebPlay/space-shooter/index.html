@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Shooter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <h1>Space Shooter</h1>
+      <p>הימנעו מאויבים ויירו כדי לצבור ניקוד.</p>
+    </header>
+    <div class="hud">
+      <div>חיים: <span id="lives">3</span></div>
+      <div>ניקוד: <span id="score">0</span></div>
+      <button id="start">התחל</button>
+    </div>
+    <section class="field" id="field">
+      <canvas id="canvas" width="700" height="420"></canvas>
+    </section>
+    <div class="overlay" id="overlay">לחץ להתחיל</div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

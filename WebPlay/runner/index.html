@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Runner אנרגטי</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header>
+      <h1>Runner אנרגטי</h1>
+      <p>קפצו מעל המכשולים, אספו ניקוד ואל תיתפסו!</p>
+    </header>
+    <section class="hud">
+      <div>ניקוד: <span id="score">0</span></div>
+      <div>מהירות: <span id="speed">1</span>x</div>
+      <button id="startBtn">התחל משחק</button>
+    </section>
+    <section class="playfield" id="playfield">
+      <div class="ground"></div>
+      <div class="runner" id="runner"></div>
+    </section>
+    <div class="overlay" id="overlay">
+      <div class="panel">
+        <h2 id="overlayTitle">Runner אנרגטי</h2>
+        <p id="overlayText">לחץ על "התחל משחק" כדי לרוץ</p>
+        <button id="restartBtn">שחק שוב</button>
+      </div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
